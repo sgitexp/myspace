@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>SPA on Matter</title>
+        <script src="/js/lib/angular.min.js"></script>
+        <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body ng-app="spaApp">
+
+        <div ng-controller="expenseController">
+            <p>{{ firstName }}&nbsp;{{ lastName }}</p>
+            <div ng-repeat="exp in expenses">
+                <p>Id          : {{ exp.expId }}</p>
+                <p>Date        : {{ exp.expDate | date }}</p>
+                <p>Amount      : {{ exp.expAmount | currency }}</p>
+                <p>Description : {{ exp.expDesc }}</p>
+            </div>
+        </div>
+
+        <!-- Modules and Modules -->
+        <script src= "/js/module/appModule.js"> </script>
+        <script src = "/js/controller/expenseController.js"></script>
+
+        <!-- Jquery Bootstrap dependencies-->
+        <script src="/js/lib/jquery-1.12.3.min.js"></script>
+        <script src="/css/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
