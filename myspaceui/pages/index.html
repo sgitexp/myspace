@@ -7,23 +7,48 @@
         <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
-    <body ng-app="spaApp">
+    <body data-ng-app="spaApp">
+    
 		<div class ="container-fluid">
-        <div ng-controller="expenseController">
-            <p>{{ firstName }}&nbsp;{{ lastName }}</p>
-            <div ng-repeat="exp in expenses">
-            	<exp-info info="exp"></exp-info>
-            </div>
+        	
+        	<div data-ng-controller="profileController">
+        		<p>{{ firstName}} &nbsp; {{lastName}}</p>
+        	</div>
+      
+        	<div data-ng-controller="finController">
+        		<h4>{{title}}</h4>
+            	<div data-ng-repeat="transaction in finTransactions">
+            		<fin-info info="transaction"></fin-info>
+            	</div>
+        	</div>
+        
+        
+        	<div data-ng-controller="tasksController">
+        		<h4>{{title}}</h4>
+            	<div data-ng-repeat="task in tasks">
+            		<task-info info="task"></task-info>
+            	</div>
+        	</div>
+        	
         </div>
 
-        <!-- Modules, Controllers & Directives-->
+        <!-- Modules -->
         <script src= "../js/module/appModule.js"> </script>
-        <script src = "../js/controller/expenseController.js"></script>
-		<script src = "../js/directives/expInfo.js"></script>
+        
+        <!--  Controllers & Directives for Profile -->
+        <script src = "../js/controller/profileController.js"></script>
+        
+        <!--  Controllers & Directives for Expense -->
+        <script src = "../js/controller/finController.js"></script>
+		<script src = "../js/directives/finInfo.js"></script>
+        
+        <!--  Controllers & Directives for Task -->
+        <script src = "../js/controller/taskController.js"></script>
+		<script src = "../js/directives/taskInfo.js"></script>
         
         <!-- Jquery Bootstrap dependencies-->
         <script src="../lib/jquery/jquery-1.12.3.min.js"></script>
         <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-		</div>
-    </body>
+		
+    </body> 
 </html>
