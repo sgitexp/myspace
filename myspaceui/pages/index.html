@@ -12,7 +12,7 @@
 		<div class ="container-fluid">
         	
         	<div data-ng-controller="profileController">
-        		<p>{{ firstName}} &nbsp; {{lastName}}</p>
+        		<profile-info first-name="firstName" last-name="lastName"></profile-info>
         	</div>
       
         	<div data-ng-controller="finController">
@@ -30,6 +30,27 @@
             	</div>
         	</div>
         	
+        	<!-- div data-ng-controller="hotelController">
+        		<h4>{{title}}</h4>
+            	<div>Minnesota</div>
+            	<p>Name: {{MN.hotelName}}</p>
+            	<p>Name: {{MN.ratePerNight}}</p>
+            	<p>Name: {{MN.state}}</p>
+            	<p>Name: {{MN.city}}</p>
+            	
+            	<div>Illionois</div>
+            	<p>Name: {{IL.hotelName}}</p>
+            	<p>Name: {{IL.ratePerNight}}</p>
+            	<p>Name: {{IL.state}}</p>
+            	<p>Name: {{IL.city}}</p>
+            	
+            	<div>Ohio</div>
+            	<p>Name: {{MN.hotelName}}</p>
+            	<p>Name: {{MN.ratePerNight}}</p>
+            	<p>Name: {{MN.state}}</p>
+            	<p>Name: {{MN.city}}</p>
+        	</div -->
+        	
         </div>
 
         <!-- Modules -->
@@ -37,6 +58,7 @@
         
         <!--  Controllers & Directives for Profile -->
         <script src = "../js/controller/profileController.js"></script>
+        <script src = "../js/directives/profileInfo.js"></script>
         
         <!--  Controllers & Directives for Expense -->
         <script src = "../js/controller/finController.js"></script>
@@ -46,6 +68,9 @@
         <script src = "../js/controller/taskController.js"></script>
 		<script src = "../js/directives/taskInfo.js"></script>
         
+        <!-- Controler for hotels -->
+        <script src = "../js/controller/hotelController.js"></script>
+         
         <!-- Jquery Bootstrap dependencies-->
         <script src="../lib/jquery/jquery-1.12.3.min.js"></script>
         <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
